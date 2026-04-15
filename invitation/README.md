@@ -20,23 +20,7 @@ A premium, modern Indian wedding invitation built as a single `index.html` file.
 
 ---
 
-## 🎨 Customise the Invitation
 
-Open `index.html` in any text editor and find/replace:
-
-| Placeholder | What to change |
-|---|---|
-| `Priya` | Bride's first name |
-| `Arjun` | Groom's first name |
-| `Priya Sharma` | Bride's full name |
-| `Arjun Mehta` | Groom's full name |
-| `November 28, 2025` | Wedding date |
-| `The Grand Leela Palace` | Venue name |
-| `Connaught Place, New Delhi` | Venue address |
-| `Mr. Ramesh & Mrs. Sunita Sharma` | Bride's parents |
-| `Mr. Vijay & Mrs. Kavita Mehta` | Groom's parents |
-| `2025-11-28T18:00:00` | Countdown target (ISO date) |
-| Google Maps embed URL | Your actual venue coords |
 
 ### Change Photos
 Replace the `src="https://images.unsplash.com/..."` URLs with your own hosted image URLs (upload to Cloudinary, ImgBB, or any CDN).
