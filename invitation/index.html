@@ -147,7 +147,7 @@
     .entry-corner.br { bottom: 20px; right: 20px; transform: scale(-1,-1); }
 
     .entry-content { position: relative; z-index: 2; padding: 2rem; max-width: 600px; }
-    .entry-bismillah {
+    .entry {
       font-family: var(--font-display);
       font-size: clamp(1rem, 2.5vw, 1.3rem);
       color: var(--gold-light);
@@ -175,7 +175,7 @@
       animation: fadeSlideDown 1s ease 0.7s both;
     }
     .entry-names em {
-      font-style: italic;
+      font-style: normal;
       color: var(--gold-light);
     }
     .entry-amp {
@@ -364,6 +364,7 @@
       border-radius: 0;
       filter: sepia(10%) saturate(0.95);
       transition: transform 0.6s ease, filter 0.6s ease;
+      transform: scale(1.1);
     }
 
     /* Arch bottom decorative pillars */
@@ -415,7 +416,7 @@
       color: var(--charcoal);
       margin-bottom: 0.5rem;
     }
-    .hero-names .bride { color: var(--maroon); font-style: italic; }
+    .hero-names .bride { color: var(--maroon); }
     .hero-names .amp {
       display: block;
       font-size: 0.45em;
@@ -426,7 +427,7 @@
     .hero-names .groom { color: var(--charcoal); }
     .hero-quote {
       font-family: var(--font-display);
-      font-style: italic;
+      font-style: normal;
       font-size: clamp(1rem, 2.2vw, 1.3rem);
       color: var(--charcoal-light);
       opacity: 0.75;
@@ -963,7 +964,8 @@
     </svg>
 
     <div class="entry-content">
-      <p class="entry-bismillah">🌙 Shubh Vivah 🌙</p>
+      <img src="ganesha.png" alt="Ganesha" style="width: 80px; height: 80px; margin: 0 auto 1.5rem; display: block;" data-aos="zoom-in" data-aos-duration="800" />
+      <p class="entry">Shubh Vivah</p>
       <p class="entry-invite-text">Together with their families</p>
       <div class="entry-names">
         <em>Pranav</em>
@@ -1006,7 +1008,7 @@
           <div class="hero-arch-ornament"></div>
           <div class="hero-arch-inner">
             <img
-              src="hero img.jpeg"
+              src="hero img.png"
               alt="Couple"
               class="hero-couple-photo"
             />
