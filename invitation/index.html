@@ -1001,7 +1001,7 @@
         <p class="hero-subtitle">Request the honour of your presence</p>
       </div>
 
-      <div class="hero-arch" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+      <div class="hero-arch" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
         <div class="hero-arch-frame">
           <div class="hero-arch-ornament"></div>
           <div class="hero-arch-inner">
@@ -1018,7 +1018,7 @@
         </div>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+      <div data-aos="slide-up" data-aos-duration="900" data-aos-delay="400">
         <div class="hero-names">
           <span class="groom">Pranav</span>
           <span class="amp">✦</span>
@@ -1253,7 +1253,7 @@
 
   <!-- Hidden audio (royalty-free instrumental) -->
   <audio id="bg-music" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    <source src="sahilmadan-wedding-invitation-421393.mp3" type="audio/mp3">
   </audio>
 
   <!-- AOS -->
@@ -1341,13 +1341,15 @@
 
     // ===== NAV SCROLL =====
     window.addEventListener('scroll', () => {
-      // Parallax on hero arch
+      // Parallax on hero arch - removed to prevent weird scrolling effect
+      /*
       const hero = document.getElementById('hero');
       if (hero) {
         const scrolled = window.pageYOffset;
         const arch = hero.querySelector('.hero-arch');
         if (arch) arch.style.transform = `translateY(${scrolled * 0.1}px)`;
       }
+      */
     });
   </script>
 </body>
