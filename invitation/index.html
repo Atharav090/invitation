@@ -913,6 +913,51 @@
       .countdown-sep { display: none; }
     }
 
+    /* ===== SCROLL HINT ===== */
+    #scroll-hint {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 700;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    #scroll-hint.show {
+      animation: hintFadeInOut 6s ease forwards;
+    }
+    @keyframes hintFadeInOut {
+      0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+      90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    }
+    .scroll-hint-text {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      padding: 1rem 1.5rem;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      backdrop-filter: blur(8px);
+    }
+    .scroll-hint-arrow {
+      display: inline-block;
+      animation: bounceDown 1.5s ease infinite;
+      font-size: 1rem;
+    }
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
     /* ===== AOS OVERRIDE ===== */
     [data-aos] { pointer-events: none; }
     [data-aos].aos-animate { pointer-events: auto; }
@@ -974,7 +1019,7 @@
       </div>
       <p class="entry-tagline">"Two families, one blessing, a lifetime of love…"</p>
       <button class="entry-btn" onclick="openInvitation()">
-        <span>✦ &nbsp; Open Invitation</span>
+        <span>✦ &nbsp; Click to open Invitation</span>
       </button>
     </div>
 
@@ -1246,6 +1291,14 @@
 
   </div><!-- /main-content -->
 
+  <!-- Scroll Hint -->
+  <div id="scroll-hint">
+    <div class="scroll-hint-text">
+      <span>✨ Scroll down to see more</span>
+      <span class="scroll-hint-arrow">↓</span>
+    </div>
+  </div>
+
   <!-- Music Button -->
   <button id="music-btn" title="Toggle Music" onclick="toggleMusic()">
     <div class="music-pulse"></div>
@@ -1286,12 +1339,14 @@
       const main = document.getElementById('main-content');
       const nav = document.getElementById('site-nav');
       const musicBtn = document.getElementById('music-btn');
+      const scrollHint = document.getElementById('scroll-hint');
 
       entry.classList.add('open');
       setTimeout(() => {
         main.classList.add('visible');
         nav.classList.add('visible');
         musicBtn.classList.add('shown');
+        scrollHint.classList.add('show');
         // Auto-play music
         const audio = document.getElementById('bg-music');
         audio.volume = 0.35;
